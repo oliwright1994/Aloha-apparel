@@ -4,9 +4,12 @@
 <head>
   <title>Aloha Apparel</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf8">
 </head>
+
 <header>
-  <img src="images/aloha-logo.svg" alt="aloha apparel logo">
+  <div class="container"></div>
+  <img class="logo" src="images/aloha-logo.svg" alt="aloha apparel logo">
   <nav>
     <ul>
       <li><a href="about.html">About</a></li>
@@ -14,39 +17,44 @@
       <li><a href="featured.html">Featured</a></li>
       <li><a href="updates.html">Updates</a></li>
     </ul>
-    <img src="images/cart-icon.svg" alt='shopping cart'>
   </nav>
+  <img class="cart" src="images/cart-icon.svg" alt='shopping cart'>
 </header>
 
 <body>
   <section class='banner'>
     <div class='banner_img'>
-      <img src="images/flower-bkgd.jpg" alt='floral background'>
-      <img src="images/banner-girl.png" alt='girl wearing a red shirt and white trousers'>
+      <div class="bannerback">
+        <img src="images/flower-bkgd.jpg" alt='floral background'>
+      </div>
+      <div class="bannergirl">
+        <img src="images/banner-girl.png" alt='girl wearing a red shirt and white trousers'>
+      </div>
     </div>
-    <div class='banner text'>
+    <div class='bannertext'>
       <p>NEW COLLECTION</p>
       <h1>Spring/Summer 2016</h1>
     </div>
   </section>
   <section class="tagline">
-    <h2><em>Hand - Crafted</em>Styles</h2>
+    <h2><em>Hand - Crafted </em>Styles</h2>
     <p>Aloha Apparel Co. sells only the finest ready-to-travel clothing. Browse our current selection of products or
       sign-up for updates below.</p>
   </section>
   <div class="container"></div>
   <nav class="departments">
-    <a href="mens.html"><img src="images/mens-category.jpg" alt="men's clothing"></a>
-    <a href="mens.html"><img src="images/sale-category.jpg" alt="items on sale"></a>
-    <a href="mens.html"><img src="images/bags-category.jpg" alt="bags"></a>
-    <a href="mens.html"><img src="images/trends-category.jpg" alt="trends department"></a>
-    <a href="mens.html"><img src="images/glasses-category.jpg" alt="glasses department"></a>
-    <a href="mens.html"><img src="images/womens-category.jpg" alt="Women's clothing"></a>
+    <a href="mens.html"><img src="images/mens-category.jpg" alt="men's clothing">Men's</a>
+    <a href="trends.html"><img src="images/trends-category.jpg" alt="trends department">Trends</a>
+    <a href="glasses.html"><img src="images/glasses-category.jpg" alt="glasses department">Glasses</a>
+    <a href="sale.html"><img src="images/sale-category.jpg" alt="items on sale">Sale</a>
+    <a href="bags.html"><img src="images/bags-category.jpg" alt="bags">Bags</a>
+    <a href="womens.html"><img src="images/womens-category.jpg" alt="Women's clothing">Women's</a>
+
   </nav>
   </div>
-  <!--randomzie the list with javascript and u know, do list-->
+  <!--randomzie the list with javascript -->
   <section class="favourites">
-    <h2><em>Most-Loved</em>Products</h2>
+    <h2><em>Most-Loved </em>Products</h2>
     <a href=><img src="images/blue-hipster-backpack.jpg" alt="a blue backpack with red straps">
       <h4>Bags</h4>
       <h3>Blue Hipster Backpack</h3>
@@ -90,31 +98,45 @@
   </section>
   <section class="updates">
     <a href="favourites.html"><img src="images/wave-bkgd.jpg"></a>
-    <h2><em>Sign-up for</em>Updates</h2>
+    <h2><em>Sign-up for </em>Updates</h2>
     <p>Stay updated on our latest products releases, be the first to find out about upcoming sales, and get free style
       tips from our blog. Unsubscribe at any time.</p>
-    <form action="placehold.com" method="POST">
+
+    <form action="placehold.com" method="POST" id=>
       <!--double check span tag-->
       <div class="email">
-        <input type="text" name="email" placeholder="Your Email"><span><button>Subscribe</button type="button"></span>
+        <input type="email" name="email" placeholder="Your Email"><button>Subscribe</button type="button">
       </div>
+
     </form>
   </section>
   <footer>
-    <h4>&copy; Aloha Apparel Co.</h4>
-    <h4>Powered by HTML and CSS.</h4>
-    <br />
-    <h4>604-604-6040. <a href="mailto:info@alohaapparel.com">info@alohaapparel.com</a></h4>
-    <h4>1490 W Broadway</h4>
-    <h4>Vancouver, BC, Canada</h4>
-    <ul>
-      <!-- learn to put in icon before text-->
-      <li><a href="https://www.facebook.com/"><img src="images/facebook-icon.png">Facebook</a></li>
-      <li><a href="https://twitter.com/?lang=en-gb"><img src="images/twitter-icon.png">Twitter</a></li>
-      <li><a href="https://www.instagram.com/"><img src="images/instagram-icon.png">Instagram</a></li>
-      <li><a href="https://www.pinterest.co.uk/"><img src="images/pinterest-icon.png">Pintrest</a></li>
-      <li><a href="https://plus.google.com/"><img src="images/google-plus-icon.png">Google<sup>&#43;</sup></a></li>
-    </ul>
+    <div class="details">
+      <h5>&copy; Aloha Apparel Co.</h5>
+      <h5>Powered by HTML and CSS.</h5>
+      <br>
+      <h5>604-604-6040. <a href="mailto:info@alohaapparel.com">info@alohaapparel.com</a></h5>
+      <br>
+      <div class="address">
+        <h5>1490 W Broadway</h5>
+        <h5>Vancouver, BC, Canada</h5>
+      </div>
+    </div>
+    <div class="socialmedia">
+      <ul>
+        <!-- learn to put in icon before text-->
+        <li><a href="https://www.facebook.com/"><img src="images/facebook-icon.png" width="16px"
+              height="16px">Facebook</a></li>
+        <li><a href="https://twitter.com/?lang=en-gb"><img src="images/twitter-icon.png" width="16px"
+              height="16px">Twitter</a></li>
+        <li><a href="https://www.instagram.com/"><img src="images/instagram-icon.png" width="16px"
+              height="16px">Instagram</a></li>
+        <li><a href="https://www.pinterest.co.uk/"><img src="images/pinterest-icon.png" width="16px"
+              height="16px">Pintrest</a></li>
+        <li><a href="https://plus.google.com/"><img src="images/google-plus-icon.png" width="16px"
+              height="16px">Google<sup>&#43;</sup></a></li>
+      </ul>
+    </div>
   </footer>
 </body>
 
