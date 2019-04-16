@@ -8,60 +8,88 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <meta charset="utf8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 
 <body>
   <header>
-    <img class="logo" src="images/aloha-logo.svg" alt="aloha apparel logo">
-    <nav>
-      <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="featured.html">Featured</a></li>
-        <li><a href="updates.html">Updates</a></li>
-      </ul>
-    </nav>
-    <a href="cart.html"><img class="cart" src="images/cart-icon.svg" alt='shopping cart'></a>
+    <div class="container">
+      <img class="logo" src="images/aloha-logo.svg" alt="aloha apparel logo">
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#featured">Featured</a></li>
+          <li><a href="#updates">Updates</a></li>
+        </ul>
+      </nav>
+      <a href="cart.html"><img class="cart" src="images/cart-icon.svg" alt='shopping cart'></a>
+    </div>
   </header>
 
 
   <section class='banner'>
-    <div class='bannerimg'>
-      <div class="bannergirl">
-        <img src="images/banner-girl.png" alt='girl wearing a red shirt and white trousers'>
+    <a id="about"></a>
+    <div class="container">
+      <img class="bannerimg" src="images/flower-bkgd.jpg" alt='girl wearing a red shirt and white trousers'>
+      <img class="bannergirl" src="images/banner-girl.png" alt='girl wearing a red shirt and white trousers'>
+      <div class="bannertag">
+        <p>NEW COLLECTION</p>
       </div>
-    </div>
-    <div class='bannertext'>
-      <p>NEW COLLECTION</p>
-      <h1>Spring/Summer 2016</h1>
+      <div class="bannertext">
+        <h2>Spring/Summer 2016</h2>
+      </div>
+
     </div>
   </section>
+
   <section class="tagline">
     <h2><em>Hand - Crafted </em>Styles</h2>
     <p>Aloha Apparel Co. sells only the finest ready-to-travel clothing. Browse our current selection of products or
       sign-up for updates below.</p>
   </section>
-  <div class="container"></div>
-  <nav class="departments">
-    <a class="mens" href="mens.html"><img src="images/mens-category.jpg">MEN'S</a>
-    <div class="trendglasses">
-      <a class="trends" href="trends.html">TRENDS</a>
-      <a class="glasses" href="glasses.html">GLASSES</a>
+
+
+  <section class="departments">
+    <div class="categorytop">
+      <img class="mens" src="images/mens-category.jpg">
+      <h2>men's</h2>
     </div>
-    <div class="salebags">
-      <a class="sale" href="sale.html">SALE</a>
-      <a class="bags" href="bags.html">BAGS</a>
+    <div class="categorytop">
+      <img class="trends" src="images/trends-category.jpg">
+      <h2>trends</h2>
     </div>
-    <a class="womens" href="womens.html">WOMENS</a>
+    <div class="categorytop">
+      <img class="glasses" src="images/glasses-category.jpg">
+      <h2>glasses</h2>
+    </div>
+    <div class="categorytop">
+      <img class="sale" src="images/sale-category.jpg">
+      <h2>Sale</h2>
+    </div>
+    <div class="categorytop">
+      <img class="bags" src="images/bags-category.jpg">
+      <h2>bags</h2>
+    </div>
+    <div class="categorytop">
+      <img class="womens" src="images/womens-category.jpg">
+      <h2>womens</h2>
+    </div>
+
+
+
+  </section>
+
 
   </nav>
   </div>
   <!--randomzie the list with javascript -->
   <section class="favourites">
+    <a id="featured"></a>
     <h2><em>Most-Loved </em>Products</h2>
     <div class="container">
-      <a href=><img src="images/blue-hipster-backpack.jpg" alt="a blue backpack with red straps">
+      <a href=""><img src="images/blue-hipster-backpack.jpg" alt="a blue backpack with red straps">
         <h4>Bags</h4>
         <h3>Blue Hipster Backpack</h3>
         <h4>$69.00</h4>
@@ -104,6 +132,7 @@
     </div>
   </section>
   <section class="updates">
+    <a id="updates"></a>
     <div class="container">
       <h2><em>Sign-up for </em>Updates</h2>
       <p>Stay updated on our latest products releases, be the first to find out about upcoming sales, and get free style
@@ -130,26 +159,46 @@
       </div>
     </div>
     <div class="socialmedia">
-      <ul>
+      <ul class="icons">
         <!-- learn to put in icon before text-->
         <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i>
-            <p>Facebook</p>
+
           </a>
         </li>
         <li><a href="https://twitter.com/?lang=en-gb"><i class="fab fa-twitter"></i>
-            <p>Twitter</p>
           </a>
         </li>
         <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i>
-            <p>Instagram</p>
           </a>
         </li>
         <li><a href="https://www.pinterest.co.uk/"><i class="fab fa-pinterest"></i>
-            <p>Pinterest</p>
           </a>
         </li>
         <li><a href="https://plus.google.com/"><i class="fab fa-google-plus-g"></i>
-            <p>Google</p>
+          </a>
+        </li>
+      </ul>
+      <ul class="socialmedia-brand">
+        <!-- learn to put in icon before text-->
+        <li><a href="https://www.facebook.com/">
+            <p>Facebook</p>
+
+          </a>
+        </li>
+        <li><a href="https://twitter.com/?lang=en-gb">
+            <p>Twitter</p>
+          </a>
+        </li>
+        <li><a href="https://www.instagram.com/">
+            <p>Instagram</p>
+          </a>
+        </li>
+        <li><a href="https://www.pinterest.co.uk/">
+            <p>Pintrest</p>
+          </a>
+        </li>
+        <li><a href="https://plus.google.com/">
+            <p>Google Plus</p>
           </a>
         </li>
       </ul>

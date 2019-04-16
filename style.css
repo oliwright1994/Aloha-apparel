@@ -104,40 +104,54 @@
     text-align: center;
     text-decoration: none;
     margin: 0;
+    list-style-type: none;
 }
 
 html {
-    background-color: black;
-    width: 1366;
-
+        background: black;
+        min-width: 320px;
 }
+/* unessary */
+header .nav {
+    justify-self: center;
+
+    }
 
 body {
     background-color: white;
-    margin: auto;
-    width: 1366px;
+    width: 100%;
+    min-width: 750px;
+
 }
 
 
-header {
-    width: 90%;
+header .container {
+    width: 100%;
     height:75px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-left: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: white;
-
-
-
-}
-
-header nav{
+    flex-direction: row;
 
 }
 
+header {
+    padding: 1em 5%;
+}
+/*
+header .container {
+    padding-right: 5%;
+    padding-left: 5%;
+}
+*/
+
+
+ul {
+    padding-inline-start: 0px;
+
+
+}
 .logo {
     align-self: stretch;
     height: 75px;
@@ -151,56 +165,81 @@ header nav{
 nav li a {
     color: rgba(216, 89, 50, 0.9);
     text-decoration: none;
-    font-size: 1.25rem;
+    font-size: 1rem;
     text-transform: uppercase;
     font-weight: 500px;
 }
 
+nav li a:hover {
+    text-decoration: underline;
+
+}
 
 nav li {
     display: inline;
-    list-style-type: none;
     margin: 1em;
+    font-weight: bold;
 }
 
-.banner p {
-    font-size: 2 rem;
+.banner .container{
+    width: 100%;
+    height: 100vh;
+    max-height: 750px;
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: 1fr 15% auto 15% 1fr;
+    grid-template-rows: 10% 10% 1fr 10% 50%;
+    grid-gap: 0px;
+    align-items: stretch;
+    text-align: center;
+    justify-items: stretch;
+    overflow: none;
+  }
+
+.bannertag {
+    grid-area: 3 / 3 / 4 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+.bannertag p {
+    font-size: 3 rem;
     font-weight: bold;
     color: rgba(255, 255, 255, 1);
-
+    text-shadow: 2px 2px 2px rgba(80, 80, 80, 0.75);
 }
 
-.banner h1 {
-    font-size: 75px;
+  .bannertext {
+    grid-area: 4 / 2 / 5 / 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.bannertext h2 {
+    font-size: 60px;
     color: rgba(255, 255, 255, 1);
     text-shadow: 2px 2px 2px rgba(80, 80, 80, 0.75);
-
-}
-
-.banner {
-    height: 905px;
-    width: 1366px;
-    background-image: url(images/flower-bkgd.jpg)
+    font-weight: 300;
+    align-self: start;
 }
 
 .bannerimg {
-    height:80%
-}
-.bannergirl {
-    height: 80%;
-}
+    grid-area: 1 / 1 / 6 / 6;
+    object-fit: cover;
 
-.bannertext {
-    position: absolute;
-    top: 800px;
-    left: 50%
+  }
 
-}
+.container .bannergirl {
+    grid-area: 2 / 3 / 6 / 4;
+    object-fit: scale-down;
+  }
 
 .tagline {
     margin: 150px auto;
 }
-
 .tagline p {
     max-width: 37em;
     margin: auto;
@@ -280,16 +319,33 @@ flex-basis: auto;
 
 */
 
+.centered {
+    height: 1em;
+}
+
+.departments a {
+
+      text-align: center;
+        color: white;
+      }
+
+.favourites {
+padding-right: 5%;
+padding-left: 5%;
+}
+
 .favourites .container {
     display:flex;
     flex-wrap: nowrap;
     overflow-x: auto;
     height: min-content;
-    width:1900px;
-    margin-left:300px;
-    margin-right: 300px;
-
+    width: 100%;
 }
+
+.favourites h2 {
+    margin: 1.5em auto;
+}
+
 
 .updates p {
     color: white;
@@ -305,28 +361,28 @@ h2 em {
     font-family: "PlayFairDisplay" ;
     font-style: italic;
     font-weight: normal;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 h2 {
     font-family: "PlayFairDisplay" ;
     font-weight: normal;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 3rem;
     color: rgba(0, 0, 0, 0.9)
 }
 
 .favourites h3 {
     font-family: "PlayFairDisplay" ;
-    font-weight: 300;
-    font-size: 3rem;
+    font-weight: normal;
+    font-size: 1.5rem;
     color: rgba(218, 120, 90, 0.9);
     margin: 1em auto;
 }
 
 h4 {
     color:  rgba(160, 160, 160, 0.9);
-    font-weight: bold;
+    font-weight: normal;
     text-transform: uppercase;
 }
 
@@ -355,9 +411,18 @@ h5 a {
     padding: 0px;
 }
 
-.updates{
-    width: initial;
+
+.departments img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
+
+
+
+
+
 
 .updates .container {
     height: 350px;
@@ -369,7 +434,7 @@ h5 a {
     align-items: center;
     justify-content: space-evenly;
     margin: 10px 0px;
-    width: initial;
+
 }
 
 .updates p {
@@ -393,9 +458,6 @@ footer h5 {
 
 }
 
-.adress:{
-    padding-right: 3em;
-}
 
 .address h5 {
     color: grey;
@@ -403,9 +465,6 @@ footer h5 {
 }
 
 .socialmedia li {
-    display:flex;
-    justify-content: space-between;
-    list-style-type: none;
     padding-right: 3em;
     text-align: left;
     line-height: 2em;
@@ -417,15 +476,28 @@ footer h5 {
     text-decoration: none; color: white;
 }
 
-.socialmedia li i {
-    display: inline;
-    width: 2em;
+.socialmedia ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: baseline;
 }
 
-.socialmedia li p {
-    display: inline;
-    padding-left: 2em;
+.socialmedia a i {
+    margin-right: 15px;
 }
+
+.socialmedia a p {
+    margin-left: 10px;
+}
+
+.socialmedia {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+
 
 form {
     background-color: white;
@@ -441,7 +513,6 @@ form {
     display: inline;
     background-color: white;
     border-radius: 20px;
-    padding-right: 3px;
     padding-top: 0.9em;
     padding-bottom: 0.9em;
     padding-left: 10px;
@@ -470,7 +541,7 @@ button {
     background-color: red;
     color: white;
     border-radius: 1em;
-    padding-right: 0.5em 1em;
+    padding: 0.5em 1em;
 
 }
 
