@@ -188,12 +188,13 @@ nav li {
     padding: 0px;
     display: grid;
     grid-template-columns: 1fr 15% auto 15% 1fr;
-    grid-template-rows: 10% 10% 1fr 10% 50%;
+    grid-template-rows: 10% 10% 1fr 40% 20%;
     grid-gap: 0px;
     align-items: stretch;
     text-align: center;
     justify-items: stretch;
     overflow: none;
+    position: relative;
   }
 
 .bannertag {
@@ -204,10 +205,11 @@ nav li {
   }
 
 .bannertag p {
-    font-size: 3 rem;
-    font-weight: bold;
+    font-size: 1.2rem;
+    font-weight: 500;
     color: rgba(255, 255, 255, 1);
     text-shadow: 2px 2px 2px rgba(80, 80, 80, 0.75);
+    z-index: 5;
 }
 
   .bannertext {
@@ -215,26 +217,39 @@ nav li {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 5;
   }
 
 .bannertext h2 {
-    font-size: 60px;
+    font-size: 4.5rem;
     color: rgba(255, 255, 255, 1);
     text-shadow: 2px 2px 2px rgba(80, 80, 80, 0.75);
     font-weight: 300;
     align-self: start;
+    z-index: 5;
 }
 
 .bannerimg {
     grid-area: 1 / 1 / 6 / 6;
     object-fit: cover;
-
+    z-index: 1;
   }
 
 .container .bannergirl {
     grid-area: 2 / 3 / 6 / 4;
     object-fit: scale-down;
+    z-index: 2
   }
+
+.bannerfilter {
+    background-color: rgba(50, 50, 50, 0.4);
+    width: 100vw;
+    height: 70vh;
+    max-height: 750px;
+    z-index: 3;
+    grid-area: 1 / 1 / 6 / 6;
+}
+
 
 .tagline {
     margin: 8vh  auto;
@@ -397,7 +412,7 @@ h5 a {
     justify-content: space-evenly;
     margin: 10px 0px;
     width: 100%;
-
+    position: relative;
 }
 
 .updates p {
