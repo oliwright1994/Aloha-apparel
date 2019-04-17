@@ -1,31 +1,30 @@
-* {
-  margin: 0px;
-}
 
-.container {
+.departments {
   display: flex;
-  width: 1000px;
-  height: auto;
-  flex-direction: row;
-  justify-content: space-around;
+  width: 100vw;
+  justify-content: space-between;
   flex-wrap: wrap;
-}
-
-.item1 {
-flex-shrink: 2
-}
-.item2 {
 
 }
-.item3 {
+
+
+.category {
+position: relative;
+margin: 5px;
+
 
 }
-.item4 {
 
+.category h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
-.item5 {
 
-}
-.item6 {
 
-}
+
+
+
+
