@@ -109,7 +109,8 @@
 
 html {
         background: black;
-        min-width: 320px;
+        min-width: 750px;
+        scroll-behavior: smooth;
 }
 /* unessary */
 header .nav {
@@ -214,7 +215,7 @@ nav li {
 
   .bannertext {
     grid-area: 4 / 2 / 5 / 5;
-    display: flex;
+    grid: flex;
     justify-content: center;
     align-items: center;
     z-index: 5;
