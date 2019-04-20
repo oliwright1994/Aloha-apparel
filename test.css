@@ -1,19 +1,39 @@
 
 .departments {
   display: flex;
-  width: 100vw;
+  max-width: 100vw;
+  height: auto;
   justify-content: space-between;
   flex-wrap: wrap;
-
+  padding: 0px;
+  margin: 0px;
 }
 
 
 .category {
 position: relative;
-margin: 5px;
+}
 
+.categorybig div {
 
 }
+
+
+.categorysmall img {
+  max-width: calc(24.5vw);
+  height: auto;
+
+}
+
+.categorybig img {
+  max-width: calc(49vw);
+  height: auto;
+
+}
+
+
+
+
 
 .category h2 {
   position: absolute;
@@ -21,9 +41,13 @@ margin: 5px;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  font-family: "Raleway";
+  font-weight: 500;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 2px 2px 2px rgba(80, 80, 80, 0.5);
+
 }
-
-
 
 
 
