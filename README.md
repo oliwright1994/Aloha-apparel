@@ -6,7 +6,7 @@ Fonts, images and colors were provided in the instructions.
 
 Icons were obtained from https://fontawesome.com/ and were imported by linking the html to the font library using a <link> tag in the head
 
-Media queries were provided at page width of 900px for tablet and 750px for mobile
+Media queries were provided at page width of 900px for tablet and mobile
 
 A meta tag was included in the head of the page to set the viewport of the page equal to its width at a scale of 1:1 to aid media queries
 
