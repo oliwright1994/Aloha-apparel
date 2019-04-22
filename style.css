@@ -111,16 +111,11 @@
         max-width: 1240;
   }
 
-
   body {
     background-color: white;
     min-width: 600px;
     font-size: 16px;
-
   }
-
-
-
 
   header .container {
     width: 100%;
@@ -130,7 +125,6 @@
     align-items: center;
     background-color: white;
     flex-direction: row;
-
   }
 
   header {
@@ -138,16 +132,20 @@
     min-height: 75px;
     min-height: 5rem;
   }
-
+  .topbar {
+    position: fixed;
+    z-index: 6;
+    background: white;
+    height: auto;
+    width: 100%;
+  }
 
   header nav ul {
     padding-inline-start: 0px;
     margin-left: 0px;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
-
-
   }
 
   nav li a {
@@ -159,51 +157,34 @@
   }
 
   nav li a:hover {
-
     color: #b64036;
-
   }
 
   nav li {
+    text-align: left;
     display: inline;
-    margin: 1rem;
+    margin: 1rem 2.5rem;
     font-weight: bold;
   }
-  @media screen and (max-width: 750px) {
-    nav li {
-        margin: 0.5rem 1rem;
 
-      }
-    }
-
-  @media screen and (max-width: 750px) {
-
-  }
   .logo {
     align-self: stretch;
     height: 10vh;
   }
 
-.cart {
+  .cart {
     height: 10vh;
     object-fit:contain;
 }
-.cart img {
 
+  .cart img {
     height: 100%;
   }
 
-
-  @media screen and (max-width: 750px) {
-    nav li {
-        width: 60px;
-        text-align: left;
-
-
-      }
-    }
-
   /* ---- Banner ---- */
+.banner {
+    padding-top: 125px;
+}
 
   .banner .container{
     width: 100%;
@@ -275,10 +256,6 @@
     grid-area: 1 / 1 / 6 / 6;
   }
 
-
-
-
-
   .tagline {
     margin: 8vh  auto;
     color: #2d2d2d;
@@ -294,14 +271,11 @@
     line-height: 2.5rem;
     font-weight: 300;
     font-size: 1.2rem;
-
-
   }
 
   .centered {
     height: 1em;
   }
-
 
   .favourites .container {
     display:flex;
@@ -335,21 +309,24 @@
     width: 5px;
   }
 
+  .scrollButtons button:hover{
+    color: #3a3a3a;
+  }
+
   .scrollButtons button:focus{
     color: #242424;
   }
-
 
   .updates p {
     color: white;
     line-height: 2em;
     z-index: 5;
   }
+
   .updates h2 {
     color: rgba(255, 255, 255, 0.9);
     text-shadow: 2px 2px 2px rgba(80, 80, 80, 0.5);
     z-index: 5;
-
   }
 
   h2 em {
@@ -418,7 +395,6 @@
     margin: 0;
   }
 
-
   .departments a {
     display: flex;
     justify-content: center;
@@ -443,8 +419,6 @@
   flex-grow: 2;
   flex-basis: 600px;
   min-width: 600px;
-
-
   }
 
   .departments .womensdep  {
@@ -453,28 +427,23 @@
   flex-shrink: 0.5;
   flex-basis: 600px;
   min-width: 600px;
-
-
   }
 
   .departments .trendsdep {
     background-image: url("images/trends-category.jpg");
-
-
   }
+
   .departments .glassesdep {
     background-image: url("images/glasses-category.jpg");
-
   }
+
   .departments .saledep {
     background-image: url("images/sale-category.jpg");
-
   }
+
   .departments .bagdep {
     background-image: url("images/bags-category.jpg");
-
   }
-
 
   .departments a h2{
     text-align: center;
@@ -552,14 +521,11 @@
   footer h5 {
     padding-left: 20px;
     text-align: left;
-
-
   }
 
 
   .address h5 {
     color: #969696;
-
   }
 
   .socialmedia li {
@@ -567,7 +533,6 @@
     text-align: left;
     line-height: 2rem;
     color: white;
-
   }
 
   .socialmedia li a:visited {
@@ -596,8 +561,6 @@
     text-align: center;
   }
 
-
-
   form {
     background-color: white;
     border-radius: 1.5rem;
@@ -616,7 +579,6 @@
     padding-top: 0.9rem;
     padding-bottom: 0.9rem;
     padding-left: 10px;
-
   }
 
   input {
@@ -624,6 +586,7 @@
     text-align: left;
     border: none;
   }
+
   input[type=email] {
     outline: none;
     text-align: left;
@@ -634,27 +597,33 @@
     box-shadow: 0 0 5px rgba(80, 80, 80, 1);
   }
 
-
   button {
     font-weight: bold;
     background-color:#e2574c;
     color: white;
     border-radius: 1.5rem;
     padding: 0.5em 1rem;
-
   }
 
-  @media screen and (max-width: 750px) {
+  button:hover {
+    background-color: #b64036;
+  }
+
+  button:focus {
+      outline: none;
+  }
+
+  @media screen and (max-width: 900px) {
     html {
         font-size: 14px;
       }
 
     header nav {
-    justify-self: center;
-    order: 2;
-    width: 100%;
-    border-top: 1px solid #d7d7d7;
-    margin-top: 10px;
+        justify-self: center;
+        order: 2;
+        width: 100%;
+        border-top: 1px solid #d7d7d7;
+        margin-top: 10px;
     }
 
     header .container {
@@ -666,13 +635,36 @@
         background-color: white;
         flex-direction: row;
         align-content: space-between;
-
     }
 
     header {
         padding: 1em 5vw;
         height: 125px;
         min-height: 5rem;
+    }
+
+    nav li {
+        margin: 0.5rem 1rem;
+
+    }
+
+      .logo {
+        align-self: stretch;
+        height: 10vh;
+    }
+
+    .cart {
+        height: 10vh;
+        object-fit:contain;
+    }
+    .cart img {
+
+        height: 100%;
+    }
+
+      nav li {
+        width: 60px;
+        text-align: left;
     }
 
     header nav ul {
@@ -684,10 +676,12 @@
         display: flex;
         justify-content: space-around;
     }
+  }
+    @media screen and (max-width: 900px) {
 
     .favourites .container {
         width: 320px;
-      }
+    }
 
     footer {
         flex-direction: column;
@@ -714,17 +708,17 @@
         justify-content: center;
         width: 25vw;
         padding: 0px;
-
-
     }
 
     footer .details {
         margin-bottom: 20px;
     }
+
     .details h5 {
         padding: 0px;
     }
 }
+
 
 
 

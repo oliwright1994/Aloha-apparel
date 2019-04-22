@@ -16,8 +16,6 @@ document.getElementById('Btn7').addEventListener("click", showItem7)
 
 document.getElementById('Btn8').addEventListener("click", showItem8)
 
-
-
 function showItem1() {
 
     favContainer.scrollTo({
@@ -73,4 +71,10 @@ function showItem8() {
         left: 2240,
         behavior: 'smooth'
     })
+}
+
+document.getElementById('subButton').addEventListener("click", subAlert)
+
+function subAlert() {
+    alert("Thanks for subscribing!");
 }

@@ -13,22 +13,24 @@
 
 
 <body>
-  <header>
-    <div class="container">
-      <img class="logo" src="images/aloha-logo.svg" alt="aloha apparel logo">
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#shop">Shop</a></li>
-          <li><a href="#featured">Featured</a></li>
-          <li><a href="#updates">Updates</a></li>
-        </ul>
-      </nav>
-      <a href="cart.html" class="cart"><img src="images/cart-icon.svg" alt='shopping cart'></a>
+  <div class="topbar">
+    <header>
+      <div class="container">
+        <img class="logo" src="images/aloha-logo.svg" alt="aloha apparel logo">
+        <nav>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#featured">Featured</a></li>
+            <li><a href="#updates">Updates</a></li>
+          </ul>
+        </nav>
+        <a href="cart.html" class="cart"><img src="images/cart-icon.svg" alt='shopping cart'></a>
 
-    </div>
+      </div>
 
-  </header>
+    </header>
+  </div>
 
 
   <section class='banner'>
@@ -171,8 +173,8 @@
       <form action="https://placehold.com" method="POST" id=email>
         <!--double check span tag-->
         <div class="emailline">
-          <input type="email" name="email" placeholder="Your Email" required="@" id="youremail"><button type="submit"
-            form="youremail" formaction="https://placehold.com">Subscribe</button>
+          <input type="email" name="email" placeholder="Your Email" required="@" id="youremail"><button id="subButton"
+            type="submit" form="youremail" formaction="https://placehold.com">Subscribe</button>
         </div>
       </form>
       <div class="updatesfilter"></div>
