@@ -94,13 +94,10 @@
     font-style: italic;
   }
 
-
-
   * {
     font-family: 'Raleway';
     font-weight: 500;
     font-style: normal;
-    font-size: 16px;
     text-align: center;
     text-decoration: none;
     margin: 0;
@@ -113,22 +110,21 @@
         scroll-behavior: smooth;
         max-width: 1240;
   }
-  /* unessary */
-  header .nav {
-    justify-self: center;
 
-    }
 
   body {
     background-color: white;
     min-width: 600px;
+    font-size: 16px;
 
   }
 
 
+
+
   header .container {
     width: 100%;
-    height:75px;
+    height: 75px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -139,28 +135,21 @@
 
   header {
     padding: 1em 5vw;
-    height: 8vh;
+    min-height: 75px;
     min-height: 5rem;
   }
-
 
 
   header nav ul {
     padding-inline-start: 0px;
     margin-left: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
 
   }
-  .logo {
-    align-self: stretch;
-    height: 10vh;
-  }
 
-
-  .cart {
-    align-self: stretch;
-    max-height: 10vh;
-  }
   nav li a {
     color: #e2574c;
     text-decoration: none;
@@ -180,6 +169,39 @@
     margin: 1rem;
     font-weight: bold;
   }
+  @media screen and (max-width: 750px) {
+    nav li {
+        margin: 0.5rem 1rem;
+
+      }
+    }
+
+  @media screen and (max-width: 750px) {
+
+  }
+  .logo {
+    align-self: stretch;
+    height: 10vh;
+  }
+
+.cart {
+    height: 10vh;
+    object-fit:contain;
+}
+.cart img {
+
+    height: 100%;
+  }
+
+
+  @media screen and (max-width: 750px) {
+    nav li {
+        width: 60px;
+        text-align: left;
+
+
+      }
+    }
 
   /* ---- Banner ---- */
 
@@ -217,7 +239,7 @@
 
   .bannertext {
     grid-area: 4 / 2 / 5 / 5;
-    grid: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     z-index: 5;
@@ -281,18 +303,13 @@
   }
 
 
-  .favourites {
-  padding-right: 5%;
-  padding-left: 5%;
-  }
-
   .favourites .container {
     display:flex;
     flex-wrap: nowrap;
-    overflow-x: auto;
+    overflow-x: hidden;
     height: min-content;
-    width: 100%;
-    margin-bottom: 8vh;
+    width: 1280px;
+    margin: 5vh auto;
   }
 
   .favourites h2 {
@@ -302,6 +319,24 @@
 
   .favourites a {
     margin-bottom: 5vh;
+  }
+
+  .scrollButtons {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 5vh;
+  }
+
+  .scrollButtons button{
+    color: #d7d7d7;
+    background: none;
+    border: none;
+    outline: none;
+    width: 5px;
+  }
+
+  .scrollButtons button:focus{
+    color: #242424;
   }
 
 
@@ -461,25 +496,8 @@
     align-items: center;
   }
 
-
-
-
-
-  /*
-  .categoryfilter {
-      position: absolute;
-      background-color: rgba(50, 50, 50, 0.4);
-      width: inherit;
-      height: inherit;
-      max-height: inherit;
-      z-index: 3;
-  }
-  */
-
-  /* updates */
-
   .updates .container {
-    height: 40vh;
+    height: auto;
     background-image: url("images/wave-bkgd.jpg");
     background-position: bottom;
     background-repeat: no-repeat;
@@ -502,6 +520,9 @@
     font-weight: 300;
     text-shadow: 2px 2px 2px rgba(80, 80, 80, 0.75);
     z-index: 5;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
   }
 
   .updatesfilter {
@@ -516,6 +537,8 @@
 
   /* footer */
 
+
+
   footer {
     align-items: center;
     display:flex;
@@ -529,7 +552,7 @@
   footer h5 {
     padding-left: 20px;
     text-align: left;
-    background-color: hsl(217°, 2%, 25%);
+
 
   }
 
@@ -621,10 +644,92 @@
 
   }
 
-  .details {
-    display: inline;
-    text-align: bottom;
-  }
+  @media screen and (max-width: 750px) {
+    html {
+        font-size: 14px;
+      }
+
+    header nav {
+    justify-self: center;
+    order: 2;
+    width: 100%;
+    border-top: 1px solid #d7d7d7;
+    margin-top: 10px;
+    }
+
+    header .container {
+        width: 100%;
+        height:125px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: white;
+        flex-direction: row;
+        align-content: space-between;
+
+    }
+
+    header {
+        padding: 1em 5vw;
+        height: 125px;
+        min-height: 5rem;
+    }
+
+    header nav ul {
+        padding-inline-start: 0px;
+        margin: 0px;
+        width:100%;
+        margin: 0px auto;
+        padding-top: 5px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .favourites .container {
+        width: 320px;
+      }
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer h5 {
+        text-align: center;
+    }
+
+    footer .container p {
+        visibility: hidden;
+        width: 0;
+    }
+
+    footer .container li {
+
+        width: 3em;
+        text-align: left;
+    }
+
+    footer .container ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 25vw;
+        padding: 0px;
+
+
+    }
+
+    footer .details {
+        margin-bottom: 20px;
+    }
+    .details h5 {
+        padding: 0px;
+    }
+}
+
+
+
+
+
 
 
 

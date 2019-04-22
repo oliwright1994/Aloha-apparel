@@ -114,9 +114,12 @@ html {
       max-width: 1240;
 }
 /* unessary */
-header .nav {
+header nav {
   justify-self: center;
-
+  order: 2;
+  width: 90%;
+  border-top: 1px solid grey;
+  margin-top: 10px;
   }
 
 body {
@@ -128,18 +131,19 @@ body {
 
 header .container {
   width: 100%;
-  height:75px;
+  height:125px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
   background-color: white;
   flex-direction: row;
+  align-content: space-between;
 
 }
 
 header {
   padding: 1em 5vw;
-  height: 8vh;
+  height: 150px;
   min-height: 5rem;
 }
 
@@ -147,19 +151,31 @@ header {
 
 header nav ul {
   padding-inline-start: 0px;
-  margin-left: 0px;
+ margin: 0px;
+  width:100 %;
+  margin: 0px auto;
+  padding-top: 5px;
+  display: flex;
+  justify-content: space-between;
 
 
 }
 .logo {
   align-self: stretch;
   height: 10vh;
+
+
 }
 
+.cart img {
+  height: 10vh;
+}
 
 .cart {
   align-self: stretch;
-  max-height: 10vh;
+ height: 10vh;
+
+ object-fit: contain;
 }
 nav li a {
   color: #e2574c;
@@ -180,6 +196,8 @@ nav li {
   margin: 1rem;
   font-weight: bold;
 }
+
+
 
 /* ---- Banner ---- */
 
