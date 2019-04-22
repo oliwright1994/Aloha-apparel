@@ -138,6 +138,7 @@
     background: white;
     height: auto;
     width: 100%;
+    border-bottom: 1px solid #d7d7d7;
   }
 
   header nav ul {
@@ -183,7 +184,7 @@
 
   /* ---- Banner ---- */
 .banner {
-    padding-top: 125px;
+    padding-top: 112px;
 }
 
   .banner .container{
@@ -299,6 +300,8 @@
       display: flex;
       justify-content: center;
       margin-bottom: 5vh;
+      text-align: center;
+
   }
 
   .scrollButtons button{
@@ -307,10 +310,17 @@
     border: none;
     outline: none;
     width: 5px;
+    padding: 0;
+    margin: 16px;
+  }
+
+  .scrollButtons button i {
+text-align: center;
   }
 
   .scrollButtons button:hover{
     color: #3a3a3a;
+    background: none;
   }
 
   .scrollButtons button:focus{
@@ -716,6 +726,10 @@
 
     .details h5 {
         padding: 0px;
+    }
+
+    .banner {
+        padding-top: 157px;
     }
 }
 
