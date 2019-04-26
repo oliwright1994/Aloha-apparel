@@ -117,7 +117,28 @@
     font-size: 16px;
   }
 
+  /* --- HEADER --- */
 
+  .screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+
+ }
+
+  .screen-reader-text:focus {
+    clip: auto !important;
+    display: block;
+    height: auto;
+    left: 20%;
+    top: 5px;
+    width: auto;
+    z-index: 100;
+    color: #e2574c;
+    padding: 5px;
+ }
   /* --- HEADER --- */
 
   header .container {
@@ -322,7 +343,7 @@
   }
 
   .scrollButtons button i {
-text-align: center;
+    text-align: center;
   }
 
   .scrollButtons button:hover{
@@ -422,34 +443,39 @@ text-align: center;
 
   .departments .mensdep {
     background-image: url("images/mens-category.jpg");
-  flex-shrink: 0.5;
-  flex-grow: 2;
-  flex-basis: 600px;
-  min-width: 600px;
+    flex-shrink: 0.5;
+    flex-grow: 2;
+    flex-basis: 600px;
+    min-width: 600px;
+
   }
 
   .departments .womensdep  {
     background-image: url("images/womens-category.jpg");
-  flex-grow: 2;
-  flex-shrink: 0.5;
-  flex-basis: 600px;
-  min-width: 600px;
+    flex-grow: 2;
+    flex-shrink: 0.5;
+    flex-basis: 600px;
+    min-width: 600px;
   }
 
   .departments .trendsdep {
     background-image: url("images/trends-category.jpg");
+
   }
 
   .departments .glassesdep {
     background-image: url("images/glasses-category.jpg");
+
   }
 
   .departments .saledep {
     background-image: url("images/sale-category.jpg");
+
   }
 
   .departments .bagdep {
     background-image: url("images/bags-category.jpg");
+
   }
 
   .departments a h2{
@@ -572,7 +598,7 @@ text-align: center;
     background-color: #b64036;
   }
 
-  button:focus {
+  button:active {
     outline: none;
   }
 
@@ -656,7 +682,7 @@ text-align: center;
     }
 
     header {
-        padding: 1em 5vw;
+        padding: 5px 1em;
         height: 100px;
         min-height: 5rem;
     }
@@ -738,13 +764,3 @@ text-align: center;
         padding-top: 132px;
     }
 }
-
-
-
-
-
-
-
-
-
-
