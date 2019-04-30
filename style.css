@@ -102,19 +102,41 @@
     text-decoration: none;
     margin: 0;
     list-style-type: none;
+    box-sizing: border-box;
+
   }
 
   html {
         background: black;
         min-width: 600px;
         scroll-behavior: smooth;
-        max-width: 1240;
   }
 
   body {
     background-color: white;
     min-width: 600px;
     font-size: 16px;
+  }
+
+  a {
+transition: all .2s ease-in-out;
+  }
+
+  input {
+    transition: all .2s ease-in-out;
+  }
+  a:focus {
+    outline: none;
+    border: 2px solid #e2574c;
+    padding: 5px;
+  }
+
+  .departments a:focus {
+  outline: none;
+  border: 2px solid #e2574c;
+  padding: 0px;
+  transform: scale(1.05);
+  box-sizing: border-box;
   }
 
   /* --- HEADER --- */
@@ -125,6 +147,7 @@
     height: 1px;
     width: 1px;
     overflow: hidden;
+    background: white;
 
  }
 
@@ -209,7 +232,7 @@
 
   /* ---- BANNER ---- */
 .banner {
-    padding-top: 112px;
+    padding-top: 108px;
   }
 
   .banner .container{
@@ -307,11 +330,15 @@
 
   /* --- FAVOURITES --- */
 
+  .favourites {
+    margin-bottom: 5vh;
+  }
+
   .favourites .container {
     display:flex;
     flex-wrap: nowrap;
     overflow-x: hidden;
-    height: min-content;
+    height: auto;
     width: 1280px;
     margin: 5vh auto;
   }
@@ -323,12 +350,13 @@
 
   .favourites a {
     margin-bottom: 5vh;
+    box-sizing: content-box;
   }
 
   .scrollButtons {
       display: flex;
       justify-content: center;
-      margin-bottom: 5vh;
+      margin: 10px;
       text-align: center;
   }
 
@@ -582,7 +610,9 @@
   }
 
   input[type=email]:focus {
-    box-shadow: 0 0 5px rgba(80, 80, 80, 1);
+    outline: none;
+    border: 2px solid #e2574c;
+    padding: 5px;
   }
 
   button {
@@ -598,10 +628,6 @@
     background-color: #b64036;
   }
 
-  button:active {
-    outline: none;
-  }
-
   /* --- FOOTER --- */
 
   footer {
@@ -612,6 +638,11 @@
     align-items: center;
     padding: 3em 4em;
     max-width: 100%;
+  }
+
+  footer .details a:hover {
+    color: #b64036;
+
   }
 
   footer h5 {
@@ -642,7 +673,7 @@
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    height: 2rem;
+    margin: 15px 0px;
     color: white;
   }
 
